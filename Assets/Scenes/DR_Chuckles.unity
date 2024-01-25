@@ -189,8 +189,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -268,8 +278,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -347,8 +367,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -615,8 +645,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -812,8 +852,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -891,8 +941,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -970,8 +1030,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1049,8 +1119,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1128,8 +1208,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
+      propertyPath: timeToLive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
       propertyPath: spawnOffset.y
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
+        type: 3}
+      propertyPath: overlapSphereRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7253352873150127761, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a879b7b4cc74aa34897112dc435e4321, type: 3}
-  m_Name: Durian
+  m_Name: Amber
   m_EditorClassIdentifier: 
   elementType: 2
-  elementName: Durian
-  description: Stinks very much.
+  elementName: Amber
+  description: Something is trapped inside, but nobody wants to free it.
   prefab: {fileID: 0}

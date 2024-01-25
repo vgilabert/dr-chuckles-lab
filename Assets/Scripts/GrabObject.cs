@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public class DragObject : MonoBehaviour
+public class GrabObject : MonoBehaviour
 {
     private GrabManager grabManager;
     
     private Rigidbody _rigidbody;
-    private bool isGrabbed;
+    public bool isGrabbed;
 
     void Start()
     {

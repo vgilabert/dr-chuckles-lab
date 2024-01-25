@@ -3,16 +3,7 @@ using UnityEngine;
 
 public class DragObject : MonoBehaviour
 {
-    public float planeHeight = 2f;
-    public float force = 20f;
-    public float drag = 15f;
-    public float releaseUpForce = 300f;
-    public float maxForceMagnitude = 10f;
-    public EasingFunction.Ease easeType = EasingFunction.Ease.EaseOutCirc;
-
-    private Vector3 mousePos;
-    private Vector3 mousePosOnPlane;
-    private Plane plane;
+    private GrabManager grabManager;
     
     private Rigidbody _rigidbody;
     private bool isGrabbed;
@@ -20,33 +11,21 @@ public class DragObject : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        plane = new Plane(Vector3.up, Vector3.up * planeHeight);
+        grabManager = GrabManager.Instance;
     }
 
     private void Update()
     {
-        GetMouseOnPlane();
         UpdatePosition();
     }
 
-    private void GetMouseOnPlane()
-    {
-        mousePos = Input.mousePosition;
-        
-        Ray ray = Camera.main.ScreenPointToRay(mousePos);
-        float distance;
-        plane.Raycast(ray, out distance);
-        mousePosOnPlane = ray.GetPoint(distance);
-        
-    }
-    
     private void UpdatePosition()
     {
         if (isGrabbed)
         {
-            Vector3 direction = mousePosOnPlane - transform.position;
-            _rigidbody.AddForce(direction * force);
-            _rigidbody.drag = drag;
+            Vector3 direction = grabManager.mousePosOnPlane - transform.position;
+            _rigidbody.AddForce(direction * grabManager.force);
+            _rigidbody.drag = grabManager.drag;
         }
         else
         {
@@ -62,10 +41,10 @@ public class DragObject : MonoBehaviour
     void OnMouseUp()
     {
         isGrabbed = false;
-        var releaseForce = EasingFunction.GetEasingFunction(easeType)(
+        var releaseForce = EasingFunction.GetEasingFunction(grabManager.easeType)(
             0, 
-            releaseUpForce,
-            MathF.Min(_rigidbody.velocity.magnitude, maxForceMagnitude) / maxForceMagnitude
+            grabManager.releaseUpForce,
+            MathF.Min(_rigidbody.velocity.magnitude, grabManager.maxForceMagnitude) / grabManager.maxForceMagnitude
         );
         _rigidbody.AddForce(Vector3.up * releaseForce);
     }

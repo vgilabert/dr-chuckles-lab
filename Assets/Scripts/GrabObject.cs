@@ -3,8 +3,12 @@ using UnityEngine;
 
 public class DragObject : MonoBehaviour
 {
+    public float planeHeight = 2f;
     public float force = 20f;
     public float drag = 15f;
+    public float releaseUpForce = 300f;
+    public float maxForceMagnitude = 10f;
+    public EasingFunction.Ease easeType = EasingFunction.Ease.EaseOutCirc;
 
     private Vector3 mousePos;
     private Vector3 mousePosOnPlane;
@@ -16,7 +20,7 @@ public class DragObject : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        plane = new Plane(Vector3.up, Vector3.up * 2);
+        plane = new Plane(Vector3.up, Vector3.up * planeHeight);
     }
 
     private void Update()
@@ -58,5 +62,11 @@ public class DragObject : MonoBehaviour
     void OnMouseUp()
     {
         isGrabbed = false;
+        var releaseForce = EasingFunction.GetEasingFunction(easeType)(
+            0, 
+            releaseUpForce,
+            MathF.Min(_rigidbody.velocity.magnitude, maxForceMagnitude) / maxForceMagnitude
+        );
+        _rigidbody.AddForce(Vector3.up * releaseForce);
     }
 }

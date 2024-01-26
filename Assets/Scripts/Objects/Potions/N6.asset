@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
+  m_Name: N6
+  m_EditorClassIdentifier: 
+  potionName: Amber shine potion
+  description: 
+  hint: 
+  ingredients:
+  - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
+  - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}
+  - {fileID: 11400000, guid: 4a2ef619376410148882938b45ee3682, type: 2}
+  resultObject: {fileID: 6059070790920416492, guid: 6ed285e03cb330143b75355cd8134f26,
+    type: 3}

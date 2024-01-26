@@ -8,9 +8,8 @@ public class ElementHolder : MonoBehaviour
 {
     public ElementObject element;
     public Vector3 spawnOffset;
-    public float overlapSphereRadius = 0.5f;
-    public float timeToLive = 5f; // how long the object can be out of the holder before it is destroyed
-    private float liveTimer; // how long the object will take to respawn after it returns to the holder
+    public Collider containerCheckCollider;
+    public float elementNb = 3; // how many elements can be in the holder at the same time
     
     private GrabObject _elementObject;
 
@@ -22,17 +21,20 @@ public class ElementHolder : MonoBehaviour
 
     void Start()
     {
-        liveTimer = 0;
         if (element.prefab != null)
         {
-            _elementObject = Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
-
+            for (int i = 0; i < elementNb; i++)
+            {
+                GameObject elem = Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
+                elem.GetComponent<Element>().element = element;
+            }
         }
     }
 
-    void Update()
+    public void Respawn(GrabObject grabObject)
     {
-        CheckElementObjectPosition();
+        grabObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        grabObject.transform.position = transform.position + spawnOffset;
     }
 
     private void CheckElementObjectPosition()
@@ -74,11 +76,5 @@ public class ElementHolder : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position + spawnOffset, 0.2f);
-        // Draw a wire sphere to show the overlap sphere in red
-        if (isOutOfHolder)
-            Gizmos.color = Color.red;
-        else 
-            Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, overlapSphereRadius);
     }
 }

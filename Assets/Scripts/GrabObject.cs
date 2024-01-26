@@ -5,20 +5,28 @@ using UnityCore.Audio;
 public class GrabObject : MonoBehaviour
 {
     private GrabManager grabManager;
-
-    
     private Rigidbody _rigidbody;
+    
     public bool isGrabbed;
-
+    public bool isOutOfHolder;
+    
+    private float liveTimer;
+    private ElementHolder holderReference;
+    
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         grabManager = GrabManager.Instance;
+        holderReference = GetComponentInParent<ElementHolder>();
+        
+        liveTimer = 0;
     }
 
     private void Update()
     {
         UpdatePosition();
+        CheckPosition();
     }
 
     private void UpdatePosition()
@@ -32,6 +40,32 @@ public class GrabObject : MonoBehaviour
         else
         {
             _rigidbody.drag = 0;
+        }
+    }
+    
+    public void Respawn()
+    {
+        holderReference.Respawn(this);
+    }
+
+    void CheckPosition()
+    {
+        isOutOfHolder = !holderReference.containerCheckCollider.bounds.Contains(transform.position);
+        if (isOutOfHolder && !isGrabbed)
+        {
+            liveTimer += Time.deltaTime;
+            if (liveTimer >= GrabManager.Instance.timeToLive)
+            {
+                Respawn();
+            }
+        }
+        else
+        {
+            liveTimer = 0;
+        }
+        if (transform.position.y < -8)
+        {
+            Respawn();
         }
     }
 

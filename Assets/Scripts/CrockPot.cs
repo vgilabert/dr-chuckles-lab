@@ -2,43 +2,68 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CrockPot : MonoBehaviour
 {
-
-    public ElementObject element;
-    public Vector3 spawnOffset;
-    public float overlapSphereRadius = 0.5f;
-
-    private ElementObject[] ingredients;
+    private List<ElementObject> elements;
     private bool isFull = false;
-
+    
+    private bool hasMagical = false;
+    private bool hasOrdinary = false;
+    private bool hasSpecial = false;
+    
     void Start()
     {
-        ingredients = new ElementObject[3];
+        elements = new List<ElementObject>();
     }
 
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        CheckElementObjectPosition();
-    }
-
-    private void CheckElementObjectPosition()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.GetComponent<ElementObject>() != null)
+        Element element = other.GetComponent<Element>();
+        GrabObject grabObject = other.GetComponent<GrabObject>();
+        if(element != null)
         {
-            if(other.GetComponent<GrabObject>().isGrabbed == false && !isFull)
+            if(grabObject.isGrabbed == false && !isFull)
             {
-                ingredients.Append(other.GetComponent<ElementObject>());
+                bool isValid = false;
+                switch (element.element.elementType)
+                {
+                    case ElementType.Magical:
+                        if(hasMagical == false)
+                        {
+                            hasMagical = true;
+                            isValid = true;
+                            elements.Add(element.element);
+                        }
+                        break;
+                    case ElementType.Ordinary:
+                        if(hasOrdinary == false)
+                        {
+                            hasOrdinary = true;
+                            isValid = true;
+                            elements.Add(element.element);
+                        }
+                        break;
+                    case ElementType.Special:
+                        if(hasSpecial == false)
+                        {
+                            hasSpecial = true;
+                            isValid = true;
+                            elements.Add(element.element);
+                        }
+                        break;
+                }
+
+                if (isValid)
+                {
+                    Destroy(other.gameObject, 1f);
+                }
+                else grabObject.Respawn();
             }
 
-            if(ingredients.Length == 3)
+            if(elements.All(x => x != null))
             {
                 isFull = true;
                 CheckIngredients();
@@ -48,7 +73,7 @@ public class CrockPot : MonoBehaviour
 
     private void CheckIngredients()
     {
-        foreach(ElementObject ingredient in ingredients)
+        foreach(ElementObject ingredient in elements)
         {
             //if(ingredient.element != element)
             //{
@@ -56,19 +81,4 @@ public class CrockPot : MonoBehaviour
             //}
         }
     }
-
-    private void Respawn()
-    {
-        
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, 0.2f);
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, overlapSphereRadius);
-    }
-
-
 }

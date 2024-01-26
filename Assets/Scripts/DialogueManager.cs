@@ -9,6 +9,9 @@ public class DialogueManager : MonoBehaviour
     public List<string> ingredientDroppedPhrases;
     public List<string> ingredientAddedPhrases;
 
+    [Range(0.0f, 1.0f)]
+    public float frequency;
+
     [SerializeField]
     GameObject dialogueBox;
     [SerializeField]
@@ -38,15 +41,21 @@ public class DialogueManager : MonoBehaviour
     
     public void TriggerDialogue(DialogueType dialogueType)
     {
-        List<string> dialogueList = GetDialogueList(dialogueType);
-        dialogueBox.SetActive(true);
-        StartCoroutine(DisplayDialogue());
-
-        if (dialogueList != null && dialogueList.Count > 0)
+        if(Random.Range(0f, 1f) > .5f)
         {
-            string randomPhrase = dialogueList[Random.Range(0, dialogueList.Count)];
-            Debug.Log(randomPhrase);
+            List<string> dialogueList = GetDialogueList(dialogueType);
+            dialogueBox.SetActive(true);
+            StartCoroutine(DisplayDialogue());
+
+            if (dialogueList != null && dialogueList.Count > 0)
+            {
+                string randomPhrase = dialogueList[Random.Range(0, dialogueList.Count)];
+                dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = randomPhrase;
+                Debug.Log(randomPhrase);
+            }
+            return;
         }
+
     }
 
     IEnumerator DisplayDialogue()

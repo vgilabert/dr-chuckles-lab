@@ -1310,31 +1310,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[0]
-      value: fils de pute
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[1]
-      value: "ta m\xE8re la chienne"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[2]
-      value: "encul\xE9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[3]
-      value: je vais t'enculer
-      objectReference: {fileID: 0}
     - target: {fileID: 7014782470570931818, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: m_Name

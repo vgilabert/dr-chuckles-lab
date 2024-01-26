@@ -18,7 +18,6 @@ public class GrabObject : MonoBehaviour
     private float defaultGrab;
     private ElementHolder holderReference;
     
-    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -61,6 +60,7 @@ public class GrabObject : MonoBehaviour
             _rigidbody.velocity = Vector3.zero;
         }
 
+        DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
         isInPot = false;
         isOutOfHolder = false;
         isGrabbed = false;

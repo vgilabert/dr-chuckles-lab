@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityCore.Audio;
 
 public class GrabObject : MonoBehaviour
 {
@@ -37,11 +38,14 @@ public class GrabObject : MonoBehaviour
     void OnMouseDown()
     {
         isGrabbed = true;
+        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Grab);
     }
     
     void OnMouseUp()
     {
         isGrabbed = false;
+        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Ungrab);
+
         var releaseForce = EasingFunction.GetEasingFunction(grabManager.easeType)(
             0, 
             grabManager.releaseUpForce,

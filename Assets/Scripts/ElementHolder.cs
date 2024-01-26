@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityCore.Audio;
 using UnityEngine;
 
 public class ElementHolder : MonoBehaviour
@@ -12,6 +13,11 @@ public class ElementHolder : MonoBehaviour
     private float liveTimer; // how long the object will take to respawn after it returns to the holder
     
     private GrabObject _elementObject;
+
+    [SerializeField]
+    private GameObject respawnEffect;
+    [SerializeField]
+    private UnityCore.Audio.AudioType respawnSound;
     private bool isOutOfHolder;
 
     void Start()
@@ -59,8 +65,10 @@ public class ElementHolder : MonoBehaviour
 
     private void Respawn()
     {
+        AudioController.Instance.PlayAudio(respawnSound);
         _elementObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _elementObject.transform.position = transform.position + spawnOffset;
+        Destroy(Instantiate(respawnEffect, transform.position, Quaternion.identity), 1f);
     }
 
     void OnDrawGizmos()

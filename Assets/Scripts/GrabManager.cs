@@ -27,7 +27,6 @@ public class GrabManager : MonoBehaviour
 
     private void Start()
     {
-        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.ST_Main);
         plane = new Plane(Vector3.up, Vector3.up * planeHeight);
     }
 

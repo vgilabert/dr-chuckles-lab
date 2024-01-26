@@ -10,6 +10,12 @@ namespace UnityCore
         {
             None,
             ST_Main,
+            SFX_Grab,
+            SFX_Ungrab,
+            SFX_Respawn,
+            SFX_MenuButtonPressed,
+            SFX_ButtonPressed,
+            SFX_ButtonHover,
             //custom types
         }
 

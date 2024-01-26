@@ -8,6 +8,9 @@ public class DialogueManager : MonoBehaviour
     
     public List<string> ingredientDroppedPhrases;
     public List<string> ingredientAddedPhrases;
+
+    [SerializeField]
+    GameObject dialogueBox;
     
     void Awake()
     {
@@ -34,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     public void TriggerDialogue(DialogueType dialogueType)
     {
         List<string> dialogueList = GetDialogueList(dialogueType);
+        dialogueBox.SetActive(true);
 
         if (dialogueList != null && dialogueList.Count > 0)
         {
@@ -60,4 +64,6 @@ public enum DialogueType
 {
     IngredientDropped,
     IngredientAdded,
+    PotionCreated,
+    Help,
 }

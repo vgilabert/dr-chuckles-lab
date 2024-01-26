@@ -121,6 +121,7 @@ public class CrockPot : MonoBehaviour
             {
                 Debug.Log(potions[i].potionName);
                 CreatePotion(potions[i]);
+                potInfos.ResetUI();
                 break;
             }
         }

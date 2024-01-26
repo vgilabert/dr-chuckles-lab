@@ -12,8 +12,10 @@ public class GrabObject : MonoBehaviour
     public bool isGrabbed;
     public bool isOutOfHolder;
     public bool isInPot;
-    
+
+    private bool teleportedToPot = false;
     private float liveTimer;
+    private float defaultGrab;
     private ElementHolder holderReference;
     
     
@@ -24,6 +26,7 @@ public class GrabObject : MonoBehaviour
         holderReference = GetComponentInParent<ElementHolder>();
         
         liveTimer = 0;
+        defaultGrab = _rigidbody.drag;
     }
 
     private void Update()
@@ -42,7 +45,7 @@ public class GrabObject : MonoBehaviour
         }
         else
         {
-            _rigidbody.drag = 0;
+            _rigidbody.drag = defaultGrab;
         }
     }
     
@@ -62,6 +65,7 @@ public class GrabObject : MonoBehaviour
         isOutOfHolder = false;
         isGrabbed = false;
         isGrabable = true;
+        teleportedToPot = false;
     }
     
     void CheckPosition()
@@ -88,10 +92,11 @@ public class GrabObject : MonoBehaviour
             Respawn();
         }
 
-        if (isInPot)
+        if (isInPot && !teleportedToPot)
         {
             transform.position = GameObject.Find("Pot").transform.position + Vector3.up * .5f;
             _rigidbody.velocity = Vector3.zero;
+            teleportedToPot = true;
         }
     }
 

@@ -7,10 +7,8 @@ using UnityEngine;
 public class ElementHolder : MonoBehaviour
 {
     public GameObject elementPrefab;
-    public Vector3 spawnOffset;
-    public float spawnRadius;
     public Collider containerCheckCollider;
-    public float elementNb = 3; // how many elements can be in the holder at the same time
+    public List<Vector3> spawnPositions;
     
     private GrabObject _elementObject;
 
@@ -24,14 +22,9 @@ public class ElementHolder : MonoBehaviour
     {
         if (elementPrefab != null)
         {
-            for (int i = 0; i < elementNb; i++)
+            for (int i = 0; i < spawnPositions.Count; i++)
             {
-                Vector3 spawnOffset = new Vector3(
-                    Random.Range(-spawnRadius, spawnRadius),
-                    Random.Range(-spawnRadius, spawnRadius),
-                    Random.Range(-spawnRadius, spawnRadius)
-                );
-                GameObject elem = Instantiate(elementPrefab, transform.position + spawnOffset, Quaternion.identity, transform);
+                Instantiate(elementPrefab, transform.position + spawnPositions[i], Quaternion.identity, transform);
             }
         }
     }
@@ -39,7 +32,7 @@ public class ElementHolder : MonoBehaviour
     public void Respawn(GrabObject grabObject)
     {
         grabObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        grabObject.transform.position = transform.position + spawnOffset;
+        grabObject.transform.position = transform.position + spawnPositions[Random.Range(0, spawnPositions.Count)];
 
         AudioController.Instance.PlayAudio(respawnSound);
         Destroy(Instantiate(respawnEffect, transform.position, Quaternion.identity), 1f);
@@ -47,6 +40,9 @@ public class ElementHolder : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, spawnRadius);
+        for (int i = 0; i < spawnPositions.Count; ++i)
+        {
+            Gizmos.DrawWireSphere(transform.position + spawnPositions[i], .1f);
+        }
     }
 }

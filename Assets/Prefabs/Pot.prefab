@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7393241142664523271}
   - component: {fileID: 5425537440695436294}
   - component: {fileID: 1848052852449699232}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1848052852449699232}
   soundFX: {fileID: 8300000, guid: 55ebcb2b2e9f9834f9283f3bcd974bee, type: 3}
+  potionSpawnOffset: {x: 0, y: 0, z: 0}
 --- !u!135 &5425537440695436294
 SphereCollider:
   m_ObjectHideFlags: 0

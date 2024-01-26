@@ -18,6 +18,8 @@ public class CrockPot : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip soundFX;
+    [SerializeField]
+    private PotInfos potInfos;
 
     public Vector3 potionSpawnOffset;
 
@@ -60,6 +62,7 @@ public class CrockPot : MonoBehaviour
                             hasMagical = true;
                             isValid = true;
                             elements.Add(element);
+                            potInfos.UpdateUI(ElementType.Magical);
                         }
                         break;
                     case ElementType.Ordinary:
@@ -68,6 +71,7 @@ public class CrockPot : MonoBehaviour
                             hasOrdinary = true;
                             isValid = true;
                             elements.Add(element);
+                            potInfos.UpdateUI(ElementType.Ordinary);
                         }
                         break;
                     case ElementType.Special:
@@ -76,6 +80,7 @@ public class CrockPot : MonoBehaviour
                             hasSpecial = true;
                             isValid = true;
                             elements.Add(element);
+                            potInfos.UpdateUI(ElementType.Special);
                         }
                         break;
                 }

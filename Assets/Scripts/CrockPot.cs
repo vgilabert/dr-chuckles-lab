@@ -2,15 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CrockPot : MonoBehaviour
 {
-
-    public ElementObject element;
-    public Vector3 spawnOffset;
-    public float overlapSphereRadius = 0.5f;
-
     private ElementObject[] ingredients;
     private bool isFull = false;
 
@@ -19,26 +15,17 @@ public class CrockPot : MonoBehaviour
         ingredients = new ElementObject[3];
     }
 
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        CheckElementObjectPosition();
-    }
-
-    private void CheckElementObjectPosition()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.GetComponent<ElementObject>() != null)
+        if(other.GetComponent<GrabObject>() != null)
         {
             if(other.GetComponent<GrabObject>().isGrabbed == false && !isFull)
             {
-                ingredients.Append(other.GetComponent<ElementObject>());
+                // TODO: add the right ingredient to the crock pot
+                Destroy(other.gameObject, 1f);
             }
 
-            if(ingredients.Length == 3)
+            if(ingredients.All(x => x != null))
             {
                 isFull = true;
                 CheckIngredients();
@@ -56,19 +43,4 @@ public class CrockPot : MonoBehaviour
             //}
         }
     }
-
-    private void Respawn()
-    {
-        
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, 0.2f);
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, overlapSphereRadius);
-    }
-
-
 }

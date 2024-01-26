@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     GameObject dialogueBox;
+    [SerializeField]
+    float dialogueDuration = 2f;
     
     void Awake()
     {
@@ -38,12 +40,19 @@ public class DialogueManager : MonoBehaviour
     {
         List<string> dialogueList = GetDialogueList(dialogueType);
         dialogueBox.SetActive(true);
+        StartCoroutine(DisplayDialogue());
 
         if (dialogueList != null && dialogueList.Count > 0)
         {
             string randomPhrase = dialogueList[Random.Range(0, dialogueList.Count)];
             Debug.Log(randomPhrase);
         }
+    }
+
+    IEnumerator DisplayDialogue()
+    {
+        yield return new WaitForSeconds(dialogueDuration);
+        dialogueBox.SetActive(false);
     }
 
     private List<string> GetDialogueList(DialogueType dialogueType)

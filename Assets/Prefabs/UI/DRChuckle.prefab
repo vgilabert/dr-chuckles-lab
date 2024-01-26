@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientDroppedPhrases: []
   ingredientAddedPhrases: []
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 2198847106614141176}
 --- !u!1 &7389508970365866341
 GameObject:
   m_ObjectHideFlags: 0

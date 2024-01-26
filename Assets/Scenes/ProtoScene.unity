@@ -608,6 +608,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8740586178059134923, guid: ac85c7c7d00b5ca44883c4b105eb3a0d,
         type: 3}
+      propertyPath: elementPrefab
+      value: 
+      objectReference: {fileID: 3313759703460342584, guid: 05ca58081b1728648b0f35bdabd8c697,
+        type: 3}
+    - target: {fileID: 8740586178059134923, guid: ac85c7c7d00b5ca44883c4b105eb3a0d,
+        type: 3}
       propertyPath: spawnOffset.y
       value: 0.3
       objectReference: {fileID: 0}
@@ -684,6 +690,12 @@ PrefabInstance:
       propertyPath: spawnRadius
       value: 0.31
       objectReference: {fileID: 0}
+    - target: {fileID: 8740586178059134923, guid: ac85c7c7d00b5ca44883c4b105eb3a0d,
+        type: 3}
+      propertyPath: elementPrefab
+      value: 
+      objectReference: {fileID: 3313759703460342584, guid: 7b1a2c9c787e3314395d05c571404e63,
+        type: 3}
     - target: {fileID: 8740586178059134923, guid: ac85c7c7d00b5ca44883c4b105eb3a0d,
         type: 3}
       propertyPath: spawnOffset.y
@@ -1933,6 +1945,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3467931798718114849, guid: e1ddc77e3b5649e42a8f38dc2796ee8d,
         type: 3}
+      propertyPath: elementPrefab
+      value: 
+      objectReference: {fileID: 3313759703460342584, guid: c2a847f9b4f02a6479e9f16cfe103eaf,
+        type: 3}
+    - target: {fileID: 3467931798718114849, guid: e1ddc77e3b5649e42a8f38dc2796ee8d,
+        type: 3}
       propertyPath: spawnOffset.y
       value: 0.3
       objectReference: {fileID: 0}
@@ -2227,3 +2245,5 @@ SceneRoots:
   - {fileID: 370813822}
   - {fileID: 1380782496}
   - {fileID: 1972416645}
+  - {fileID: 8265274767613428302}
+  - {fileID: 850604643}

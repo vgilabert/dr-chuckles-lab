@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  isOutOfHolder: 0
+  timeToLive: 3
 --- !u!136 &2270289786790594954
 CapsuleCollider:
   m_ObjectHideFlags: 0

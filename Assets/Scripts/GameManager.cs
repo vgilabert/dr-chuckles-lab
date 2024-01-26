@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
 {
     public bool isGamePaused = false;
 
+    [Header("Music")]
     public AudioType levelMusic;
-    
+
+    [Header("Potions")] 
+    public List<PotionObject> potions;
+
     UIManager uiManager;
     CameraView cam;
 

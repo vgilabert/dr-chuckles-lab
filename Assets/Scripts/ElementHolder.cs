@@ -35,41 +35,8 @@ public class ElementHolder : MonoBehaviour
     {
         grabObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         grabObject.transform.position = transform.position + spawnOffset;
-    }
 
-    private void CheckElementObjectPosition()
-    {
-        isOutOfHolder = false;
-        // Check if the element object is out of the holder with an overlap sphere
-        Collider[] colliders = Physics.OverlapSphere(transform.position + spawnOffset, overlapSphereRadius);
-        if (colliders.Any(col => col.gameObject == _elementObject.gameObject) == false)
-        {
-            isOutOfHolder = true;
-        }
-        if (isOutOfHolder && _elementObject.isGrabbed == false)
-        {
-            liveTimer += Time.deltaTime;
-        }
-        else
-        {
-            liveTimer = 0;
-        }
-        if (_elementObject.transform.position.y < - 5)
-        {
-            Respawn();
-            DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
-        }
-        if (liveTimer > timeToLive)
-        {
-            Respawn();
-        }
-    }
-
-    private void Respawn()
-    {
         AudioController.Instance.PlayAudio(respawnSound);
-        _elementObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        _elementObject.transform.position = transform.position + spawnOffset;
         Destroy(Instantiate(respawnEffect, transform.position, Quaternion.identity), 1f);
     }
 

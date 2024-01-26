@@ -8,6 +8,7 @@ public class GrabObject : MonoBehaviour
     private Rigidbody _rigidbody;
 
     public bool isGrabable = true;
+    public bool isPotion = false;
     public bool isGrabbed;
     public bool isOutOfHolder;
     public bool isInPot;
@@ -47,7 +48,16 @@ public class GrabObject : MonoBehaviour
     
     public void Respawn()
     {
-        holderReference.Respawn(this);
+        if (!isPotion)
+        {
+            holderReference.Respawn(this);
+        }
+        else
+        {
+            transform.position = GameObject.Find("PotionHolder").transform.position;
+            _rigidbody.velocity = Vector3.zero;
+        }
+
         isInPot = false;
         isOutOfHolder = false;
         isGrabbed = false;
@@ -56,23 +66,32 @@ public class GrabObject : MonoBehaviour
     
     void CheckPosition()
     {
-        isOutOfHolder = !holderReference.containerCheckCollider.bounds.Contains(transform.position);
-        if (isOutOfHolder && !isGrabbed && !isInPot)
+        if (!isPotion)
         {
-            liveTimer += Time.deltaTime;
-            if (liveTimer >= GrabManager.Instance.timeToLive)
+            isOutOfHolder = !holderReference.containerCheckCollider.bounds.Contains(transform.position);
+            if (isOutOfHolder && !isGrabbed && !isInPot)
             {
-                Respawn();
+                liveTimer += Time.deltaTime;
+                if (liveTimer >= GrabManager.Instance.timeToLive)
+                {
+                    Respawn();
+                }
             }
-        }
-        else 
-        {
-            liveTimer = 0;
+            else
+            {
+                liveTimer = 0;
+            }
         }
 
         if (transform.position.y < -8)
         {
             Respawn();
+        }
+
+        if (isInPot)
+        {
+            transform.position = GameObject.Find("Pot").transform.position + Vector3.up * .5f;
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 

@@ -8,6 +8,7 @@ public class ElementHolder : MonoBehaviour
 {
     public GameObject elementPrefab;
     public Vector3 spawnOffset;
+    public float spawnRadius;
     public Collider containerCheckCollider;
     public float elementNb = 3; // how many elements can be in the holder at the same time
     
@@ -25,6 +26,11 @@ public class ElementHolder : MonoBehaviour
         {
             for (int i = 0; i < elementNb; i++)
             {
+                Vector3 spawnOffset = new Vector3(
+                    Random.Range(-spawnRadius, spawnRadius),
+                    Random.Range(-spawnRadius, spawnRadius),
+                    Random.Range(-spawnRadius, spawnRadius)
+                );
                 GameObject elem = Instantiate(elementPrefab, transform.position + spawnOffset, Quaternion.identity, transform);
             }
         }
@@ -41,6 +47,6 @@ public class ElementHolder : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position + spawnOffset, 0.2f);
+        Gizmos.DrawWireSphere(transform.position + spawnOffset, spawnRadius);
     }
 }

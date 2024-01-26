@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Element", menuName = "Objects/ElementObject", order = 1)]

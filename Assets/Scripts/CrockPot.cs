@@ -8,8 +8,8 @@ using UnityEngine;
 public class CrockPot : MonoBehaviour
 {
     private List<Element> elements;
+
     private bool isFull = false;
-    
     private bool hasMagical = false;
     private bool hasOrdinary = false;
     private bool hasSpecial = false;
@@ -19,11 +19,15 @@ public class CrockPot : MonoBehaviour
     [SerializeField]
     private AudioClip soundFX;
 
+    public Vector3 potionSpawnOffset;
+
     void Start()
     {
         elements = new List<Element>();
         audioSource.clip = soundFX;
         audioSource.Play();
+
+        GameObject.Find("PotionHolder").transform.position = transform.position + potionSpawnOffset;
     }
 
     void Update()
@@ -94,12 +98,48 @@ public class CrockPot : MonoBehaviour
 
     private void CheckIngredients()
     {
-        foreach(Element element in elements)
-        {
-            //if(ingredient.element != element)
-            //{
+        Debug.Log("Check potion ingredients");
+        var potions = GameManager.Instance.potions;
+        var ingredients = elements
+            .OrderBy(i => i.element.elementName)
+            .Select(i => i.element.elementName)
+            .ToList();
 
-            //}
+        for (int i = 0; i < potions.Count; ++i)
+        {
+            var potionIngredients = potions[i].ingredients
+                .OrderBy(ingredient => ingredient.elementName)
+                .Select(ingredient => ingredient.elementName)
+                .ToList();
+
+            if (ingredients.SequenceEqual(potionIngredients))
+            {
+                Debug.Log(potions[i].potionName);
+                CreatePotion(potions[i]);
+                break;
+            }
         }
+    }
+
+    private void CreatePotion(PotionObject potionObj)
+    {
+        isFull = false;
+        hasMagical = false;
+        hasOrdinary = false;
+        hasSpecial = false;
+
+        foreach (Element element in elements)
+        {
+            element.GetComponent<GrabObject>().Respawn();
+        }
+
+        // Create potion
+        // TODO add effect
+        Instantiate(potionObj.resultObject, transform.position + potionSpawnOffset, Quaternion.identity);
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position + potionSpawnOffset, 0.2f);
     }
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   elementType: 0
   elementName: Dwarf's teeth
   description: Surprisingly big coming from a dwarf.
-  prefab: {fileID: 854494591786137749, guid: 54a0dd78a3d71694bb5f9bbd95dd36da, type: 3}
+  prefab: {fileID: 3667209812719680743, guid: 54a0dd78a3d71694bb5f9bbd95dd36da, type: 3}

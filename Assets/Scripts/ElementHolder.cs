@@ -44,7 +44,12 @@ public class ElementHolder : MonoBehaviour
         {
             liveTimer = 0;
         }
-        if (liveTimer > timeToLive || _elementObject.transform.position.y < - 5)
+        if (_elementObject.transform.position.y < - 5)
+        {
+            Respawn();
+            DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
+        }
+        if (liveTimer > timeToLive)
         {
             Respawn();
         }

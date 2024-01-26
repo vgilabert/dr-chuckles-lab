@@ -4,6 +4,7 @@ using UnityEngine;
 public class GrabObject : MonoBehaviour
 {
     private GrabManager grabManager;
+
     
     private Rigidbody _rigidbody;
     public bool isGrabbed;

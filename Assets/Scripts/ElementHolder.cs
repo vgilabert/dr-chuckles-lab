@@ -20,6 +20,7 @@ public class ElementHolder : MonoBehaviour
         if (element.prefab != null)
         {
             _elementObject = Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
+
         }
     }
 
@@ -33,7 +34,8 @@ public class ElementHolder : MonoBehaviour
         isOutOfHolder = false;
         // Check if the element object is out of the holder with an overlap sphere
         Collider[] colliders = Physics.OverlapSphere(transform.position + spawnOffset, overlapSphereRadius);
-        if (colliders.Any(col => col.gameObject == _elementObject.gameObject) == false)       {
+        if (colliders.Any(col => col.gameObject == _elementObject.gameObject) == false)
+        {
             isOutOfHolder = true;
         }
         if (isOutOfHolder && _elementObject.isGrabbed == false)

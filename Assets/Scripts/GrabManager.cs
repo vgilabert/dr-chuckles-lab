@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityCore.Audio;
 using UnityEngine;
 
 public class GrabManager : MonoBehaviour
@@ -26,6 +27,7 @@ public class GrabManager : MonoBehaviour
 
     private void Start()
     {
+        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.ST_Main);
         plane = new Plane(Vector3.up, Vector3.up * planeHeight);
     }
 

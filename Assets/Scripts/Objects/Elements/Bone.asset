@@ -15,4 +15,4 @@ MonoBehaviour:
   elementType: 1
   elementName: Bone
   description: Just a chiken leg. Probably...
-  prefab: {fileID: 0}
+  prefab: {fileID: 919132149155446097, guid: 2d42ef28a2a565640878ea8478124af9, type: 3}

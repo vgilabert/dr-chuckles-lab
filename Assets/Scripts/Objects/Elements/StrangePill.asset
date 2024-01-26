@@ -15,4 +15,4 @@ MonoBehaviour:
   elementType: 2
   elementName: Strange pill
   description: You may experience some visuals, but don't worry. It's medicine.
-  prefab: {fileID: 0}
+  prefab: {fileID: 3831635873413107580, guid: edb3af5638cccbb489423a90ea5b3b7d, type: 3}

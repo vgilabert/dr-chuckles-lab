@@ -15,4 +15,4 @@ MonoBehaviour:
   elementType: 2
   elementName: Durian
   description: Stinks very much.
-  prefab: {fileID: 0}
+  prefab: {fileID: 919132149155446097, guid: 8b984d167d2953b458e9de483d9a571f, type: 3}

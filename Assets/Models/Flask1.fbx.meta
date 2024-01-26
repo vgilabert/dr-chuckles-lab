@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9332adbc2ac4fd14cbe1923429bdf6e7
+guid: bd5ff83ef33126a4c980152c9875bc06
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,38 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Black
-    second: {fileID: 2100000, guid: acfe08bb59aafc74ea39519dab954f37, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 771a43c1be04a324b83d24aa3f86d92d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cuivre
-    second: {fileID: 2100000, guid: df9144f19e3e7c54eaedd2d7ec0ae07a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Gold
-    second: {fileID: 2100000, guid: e8c2f2d19a2edb24aafe7e7d3cd64805, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Liege
-    second: {fileID: 2100000, guid: 2d890d732ed67ed41ba31c1881404abe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light metal
-    second: {fileID: 2100000, guid: 5cf9458947943de46a6024eca376b057, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MeTAL
-    second: {fileID: 2100000, guid: cd85b93b27c1ae343b94113bef0254ac, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Transparent
-    second: {fileID: 2100000, guid: 82cb5062122a93a46a8c1237b1c87d69, type: 2}
+      name: Wall 3
+    second: {fileID: 2100000, guid: f78e5f1a7ed2a6842982760df54f46e8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

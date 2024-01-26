@@ -14,9 +14,24 @@ public class CrockPot : MonoBehaviour
     private bool hasOrdinary = false;
     private bool hasSpecial = false;
 
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip soundFX;
+
     void Start()
     {
         elements = new List<Element>();
+        audioSource.clip = soundFX;
+        audioSource.Play();
+    }
+
+    void Update()
+    {
+        if (audioSource != null)
+        {
+            audioSource.volume = PlayerPrefs.GetFloat("SFX");
+        }
     }
 
     private void OnTriggerStay(Collider other)

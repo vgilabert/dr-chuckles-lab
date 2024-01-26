@@ -87,6 +87,8 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: a323f370be26f4447991a3dd5e16795c, type: 3}
     - type: 5
       clip: {fileID: 8300000, guid: 899306c38d0d15d43aff7d18e070b9a9, type: 3}
+    - type: 8
+      clip: {fileID: 8300000, guid: 899306c38d0d15d43aff7d18e070b9a9, type: 3}
     paused: 0
     volume: 0
     pitch: 0

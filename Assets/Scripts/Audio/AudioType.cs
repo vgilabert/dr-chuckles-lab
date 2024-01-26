@@ -16,6 +16,7 @@ namespace UnityCore
             SFX_MenuButtonPressed,
             SFX_ButtonPressed,
             SFX_ButtonHover,
+            SFX_PlayButtonPressed,
             //custom types
         }
 

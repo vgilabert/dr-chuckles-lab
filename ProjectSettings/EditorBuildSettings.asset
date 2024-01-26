@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 20ffcd2973e492e4e903394899a56cee
+  - enabled: 1
+    path: Assets/Scenes/DR_Chuckles.unity
+    guid: fc71bb8f5ec22a346b513dec214e3bb7
   m_configObjects: {}

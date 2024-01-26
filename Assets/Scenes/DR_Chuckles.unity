@@ -250,10 +250,37 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3728513761995571863, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+    - target: {fileID: 3728513763034244380, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.645294
+      value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728513763034244381, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728513763034244381, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ad5ba1b6ab22eb948aae94da5d5d37d6,
+        type: 2}
+    - target: {fileID: 3728513763034244381, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728513763034244381, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2851541151215503085, guid: ad5ba1b6ab22eb948aae94da5d5d37d6,
+        type: 2}
+    - target: {fileID: 3728513763034244381, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4152769761804265317, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
         type: 3}
@@ -379,11 +406,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8761145312011574427, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -679,6 +701,7 @@ GameObject:
   - component: {fileID: 1170059305}
   - component: {fileID: 1170059304}
   - component: {fileID: 1170059307}
+  - component: {fileID: 1170059308}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -804,6 +827,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1170059308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170059303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513a2d27e7a80024db48cf8052039a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: {x: 360, y: 360}
 --- !u!1001 &1471474737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1736,11 +1772,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3361537230974252847, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7102929093587843795, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
         type: 3}
       propertyPath: m_Name
       value: Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 7393241142664523271, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
+        type: 3}
+      propertyPath: soundFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 55ebcb2b2e9f9834f9283f3bcd974bee, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

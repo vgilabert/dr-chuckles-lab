@@ -3,7 +3,12 @@ guid: 8bedaedeadf9c8d4a8bb851f110614b2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marmite
+    second: {fileID: 2100000, guid: 9f1dac9e5419f044a9be5eae09b95db4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

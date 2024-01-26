@@ -13,7 +13,8 @@ public class ElementHolder : MonoBehaviour
         {
             for (int i = 0; i < elementNb; i++)
             {
-                Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
+                GameObject elem = Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
+                elem.GetComponent<Element>().element = element;
             }
         }
     }

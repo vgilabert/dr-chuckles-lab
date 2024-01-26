@@ -8,7 +8,6 @@ public class GrabObject : MonoBehaviour
     
     public bool isGrabbed;
     public bool isOutOfHolder;
-    public float timeToLive = 5f;
     
     private float liveTimer;
     private ElementHolder holderReference;
@@ -42,6 +41,11 @@ public class GrabObject : MonoBehaviour
             _rigidbody.drag = 0;
         }
     }
+    
+    public void Respawn()
+    {
+        holderReference.Respawn(this);
+    }
 
     void CheckPosition()
     {
@@ -49,9 +53,9 @@ public class GrabObject : MonoBehaviour
         if (isOutOfHolder && !isGrabbed)
         {
             liveTimer += Time.deltaTime;
-            if (liveTimer >= timeToLive)
+            if (liveTimer >= GrabManager.Instance.timeToLive)
             {
-                holderReference.Respawn(this);
+                Respawn();
             }
         }
         else
@@ -60,7 +64,7 @@ public class GrabObject : MonoBehaviour
         }
         if (transform.position.y < -8)
         {
-            holderReference.Respawn(this);
+            Respawn();
         }
     }
 

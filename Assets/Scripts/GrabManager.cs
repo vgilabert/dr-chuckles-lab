@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityCore.Audio;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GrabManager : MonoBehaviour
 {
@@ -12,6 +10,7 @@ public class GrabManager : MonoBehaviour
     public float releaseUpForce = 300f;
     public float maxForceMagnitude = 10f;
     public EasingFunction.Ease easeType = EasingFunction.Ease.EaseOutCirc;
+    public float timeToLive = 3f;
     
     public Vector3 mousePos;
     public Vector3 mousePosOnPlane;

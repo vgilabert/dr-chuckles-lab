@@ -7,7 +7,7 @@ public class ElementObject : ScriptableObject
     public string elementName;
     public string description;
 
-    public GrabObject prefab;
+    public GameObject prefab;
 }
 
 public enum ElementType

@@ -363,7 +363,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -471,6 +471,7 @@ MonoBehaviour:
   releaseUpForce: 500
   maxForceMagnitude: 25
   easeType: 20
+  timeToLive: 3
   mousePos: {x: 0, y: 0, z: 0}
   mousePosOnPlane: {x: 0, y: 0, z: 0}
 --- !u!4 &1109809947
@@ -687,7 +688,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1051,7 +1052,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1140,7 +1141,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1229,7 +1230,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1318,7 +1319,7 @@ PrefabInstance:
         type: 3}
       propertyPath: element
       value: 
-      objectReference: {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48,
+      objectReference: {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe,
         type: 2}
     - target: {fileID: 6002324873264651973, guid: 66b46ffecc0820b409a19fe098379a07,
         type: 3}
@@ -1420,12 +1421,12 @@ SceneRoots:
   - {fileID: 1170059306}
   - {fileID: 1638444553}
   - {fileID: 1686693996}
+  - {fileID: 1737426880}
+  - {fileID: 1968311509}
   - {fileID: 290496473}
   - {fileID: 58125393}
-  - {fileID: 1737426880}
   - {fileID: 1934840686}
   - {fileID: 753337307}
-  - {fileID: 1968311509}
   - {fileID: 2018336561}
   - {fileID: 1471474737}
   - {fileID: 1109809947}

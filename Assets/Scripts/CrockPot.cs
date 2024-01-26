@@ -7,16 +7,16 @@ using UnityEngine;
 
 public class CrockPot : MonoBehaviour
 {
-    private List<ElementObject> elements;
+    private List<Element> elements;
     private bool isFull = false;
     
     private bool hasMagical = false;
     private bool hasOrdinary = false;
     private bool hasSpecial = false;
-    
+
     void Start()
     {
-        elements = new List<ElementObject>();
+        elements = new List<Element>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -25,6 +25,11 @@ public class CrockPot : MonoBehaviour
         GrabObject grabObject = other.GetComponent<GrabObject>();
         if(element != null)
         {
+            if (elements.Contains(element))
+            {
+                return;
+            }
+
             if(grabObject.isGrabbed == false && !isFull)
             {
                 bool isValid = false;
@@ -35,7 +40,7 @@ public class CrockPot : MonoBehaviour
                         {
                             hasMagical = true;
                             isValid = true;
-                            elements.Add(element.element);
+                            elements.Add(element);
                         }
                         break;
                     case ElementType.Ordinary:
@@ -43,7 +48,7 @@ public class CrockPot : MonoBehaviour
                         {
                             hasOrdinary = true;
                             isValid = true;
-                            elements.Add(element.element);
+                            elements.Add(element);
                         }
                         break;
                     case ElementType.Special:
@@ -51,19 +56,20 @@ public class CrockPot : MonoBehaviour
                         {
                             hasSpecial = true;
                             isValid = true;
-                            elements.Add(element.element);
+                            elements.Add(element);
                         }
                         break;
                 }
 
                 if (isValid)
                 {
-                    Destroy(other.gameObject, 1f);
+                    grabObject.isInPot = true;
+                    grabObject.isGrabable = false;
                 }
                 else grabObject.Respawn();
             }
 
-            if(elements.All(x => x != null))
+            if(hasSpecial && hasMagical && hasOrdinary)
             {
                 isFull = true;
                 CheckIngredients();
@@ -73,7 +79,7 @@ public class CrockPot : MonoBehaviour
 
     private void CheckIngredients()
     {
-        foreach(ElementObject ingredient in elements)
+        foreach(Element element in elements)
         {
             //if(ingredient.element != element)
             //{

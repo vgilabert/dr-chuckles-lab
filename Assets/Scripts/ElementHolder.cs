@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ElementHolder : MonoBehaviour
 {
-    public ElementObject element;
+    public GameObject elementPrefab;
     public Vector3 spawnOffset;
     public Collider containerCheckCollider;
     public float elementNb = 3; // how many elements can be in the holder at the same time
@@ -21,12 +21,11 @@ public class ElementHolder : MonoBehaviour
 
     void Start()
     {
-        if (element.prefab != null)
+        if (elementPrefab != null)
         {
             for (int i = 0; i < elementNb; i++)
             {
-                GameObject elem = Instantiate(element.prefab, transform.position + spawnOffset, Quaternion.identity, transform);
-                elem.GetComponent<Element>().element = element;
+                GameObject elem = Instantiate(elementPrefab, transform.position + spawnOffset, Quaternion.identity, transform);
             }
         }
     }

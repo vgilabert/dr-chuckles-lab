@@ -147,9 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff93141b3b65114ab627adb5d7ed5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabable: 1
   isGrabbed: 0
   isOutOfHolder: 0
-  timeToLive: 5
+  isInPot: 0
 --- !u!114 &4051704666547440773
 MonoBehaviour:
   m_ObjectHideFlags: 0

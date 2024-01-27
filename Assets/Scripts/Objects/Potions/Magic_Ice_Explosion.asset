@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
+  m_Name: Magic_Ice_Explosion
+  m_EditorClassIdentifier: 
+  potionName: Gear and strange pills reverse potion
+  description: 
+  hint: 
+  ingredients:
+  - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
+  - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}
+  - {fileID: 11400000, guid: b5a8714a66f59094699dc020521f0e17, type: 2}
+  spawnSoundFX: 9
+  explodeSoundFX: 13
+  resultObject: {fileID: 1100233340227068027, guid: 23923386ac1972742a74b18ba820c782,
+    type: 3}
+  spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
+    type: 3}
+  explodeVFX: {fileID: 2232191510035085060, guid: 600ebccdb5a7c5d4fa9125bcc22c53ea,
+    type: 3}
+  isGroundVFX: 0
+  effectDuration: 8

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
+  m_Name: Halloween
+  m_EditorClassIdentifier: 
+  potionName: Durian and bone vomit potion
+  description: 
+  hint: 
+  rectionPhrases: []
+  ingredients:
+  - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
+  - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}
+  - {fileID: 11400000, guid: 5f21822ae63ff1c42b5fffc4d6203399, type: 2}
+  spawnSoundFX: 9
+  explodeSoundFX: 18
+  resultObject: {fileID: 1100233340227068027, guid: 508b4a871f8eb574b8f41bf9d2ae5552,
+    type: 3}
+  spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
+    type: 3}
+  explodeVFX: {fileID: 1013539938034307939, guid: d283b829e54715047897e5e0e4c6c0a8,
+    type: 3}
+  isGroundVFX: 0
+  effectDuration: 2

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
+  m_Name: Poison
+  m_EditorClassIdentifier: 
+  potionName: Unicorn horn tickle potion
+  description: 
+  hint: 
+  ingredients:
+  - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
+  - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}
+  - {fileID: 11400000, guid: 5f21822ae63ff1c42b5fffc4d6203399, type: 2}
+  spawnSoundFX: 9
+  explodeSoundFX: 9
+  resultObject: {fileID: 1100233340227068027, guid: baad7d15897749d4186eb73716546e06,
+    type: 3}
+  spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
+    type: 3}
+  explodeVFX: {fileID: 1013539938034307939, guid: d283b829e54715047897e5e0e4c6c0a8,
+    type: 3}
+  isGroundVFX: 0
+  effectDuration: 2

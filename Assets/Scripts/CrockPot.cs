@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using UnityCore.Audio;
 using UnityEngine;
 
 public class CrockPot : MonoBehaviour
@@ -89,6 +90,8 @@ public class CrockPot : MonoBehaviour
                 {
                     grabObject.isInPot = true;
                     grabObject.isGrabable = false;
+                    DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientAdded);
+                    AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Ingredient);
                 }
                 else grabObject.Respawn();
             }
@@ -141,6 +144,7 @@ public class CrockPot : MonoBehaviour
 
         // Create potion
         // TODO add effect
+        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Potion);
         Instantiate(potionObj.resultObject, transform.position + potionSpawnOffset, Quaternion.identity);
     }
 

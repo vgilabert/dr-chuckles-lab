@@ -16,7 +16,10 @@ public class DialogueManager : MonoBehaviour
     GameObject dialogueBox;
     [SerializeField]
     float dialogueDuration = 2f;
-    
+
+    public float delay = 0.05f;
+    private string currentText = "";
+
     void Awake()
     {
         Instance = this;
@@ -41,16 +44,17 @@ public class DialogueManager : MonoBehaviour
     
     public void TriggerDialogue(DialogueType dialogueType)
     {
-        if(Random.Range(0f, 1f) > .5f)
+        if(Random.Range(0f, 1f) < frequency)
         {
             List<string> dialogueList = GetDialogueList(dialogueType);
             dialogueBox.SetActive(true);
-            StartCoroutine(DisplayDialogue());
+
 
             if (dialogueList != null && dialogueList.Count > 0)
             {
                 string randomPhrase = dialogueList[Random.Range(0, dialogueList.Count)];
                 dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = randomPhrase;
+                StartCoroutine(DisplayDialogue(randomPhrase));
                 Debug.Log(randomPhrase);
             }
             return;
@@ -58,8 +62,15 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    IEnumerator DisplayDialogue()
+    IEnumerator DisplayDialogue(string fullText)
     {
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            currentText = fullText.Substring(0, i);
+            dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+
         yield return new WaitForSeconds(dialogueDuration);
         dialogueBox.SetActive(false);
     }
@@ -76,6 +87,8 @@ public class DialogueManager : MonoBehaviour
                 return null;
         }
     }
+
+
 }
 
 public enum DialogueType

@@ -61,6 +61,7 @@ public class GrabObject : MonoBehaviour
         }
 
         DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
+
         isInPot = false;
         isOutOfHolder = false;
         isGrabbed = false;
@@ -89,6 +90,7 @@ public class GrabObject : MonoBehaviour
 
         if (transform.position.y < -8)
         {
+            
             Respawn();
         }
 

@@ -496,19 +496,26 @@ MonoBehaviour:
   - 'Do you even know how much that costs?!  '
   - 'Don''t expect me to clean your mess!   '
   - 'What a goofy person you are..   '
+  - 'igredients can be placed  in the marmite or in their pot for a reason..  '
+  - 'have you tried to put it in the marmite? '
   ingredientAddedPhrases:
   - 'I''m not sure that''s a good idea...  '
-  - 'What are you trying to do?  '
+  - 'What are you trying to do?   '
   - 'You don''t know what you''re doing, do you?   '
-  - 'You don''t know what you''re doing, do you?   '
+  - 'Yes it can work i guess  '
   - 'AAAAAAAAAH!!! ...Oh wait, that''s not so bad.   '
+  - 'i wouldn''t have put this one if i was you  '
   potionCreatedPhrases:
-  - Well done!
-  - 'You '
+  - 'Well done! You knew what you were doing afterall  '
+  - 'Good color, but i''m worried worry about the flavour   '
+  - 'Nice, let''s trhow it! my favourite part    '
+  - 'throw that one far, i care about my face   '
+  - 'i don''t remember that one hm.. try it!    '
+  - 'Oh i see, one of my personal avourite    '
   potionDroppedPhrases: []
   potionExplodedPhrases: []
   frequency: 0.148
-  timeBetweenDialog: 0
+  timeBetweenDialog: 5
   dialogueBox: {fileID: 2198847106614141176}
   dialogueDuration: 2
   delay: 0.01

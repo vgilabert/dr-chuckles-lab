@@ -14,6 +14,8 @@ public class PotInfos : MonoBehaviour
     GameObject ordinary;
     [SerializeField]
     GameObject special;
+    [SerializeField]
+    Button clearButton;
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class PotInfos : MonoBehaviour
                 special.SetActive(true);
                 break;
         }
+        clearButton.interactable = true;
     }
 
     public void ResetUI()
@@ -41,6 +44,7 @@ public class PotInfos : MonoBehaviour
         magical.SetActive(false);
         ordinary.SetActive(false);
         special.SetActive(false);
+        clearButton.interactable = false;
     }
 
 

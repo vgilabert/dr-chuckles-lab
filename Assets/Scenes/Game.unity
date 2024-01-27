@@ -2724,71 +2724,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[0]
-      value: Well done! You knew what you were doing afterall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[1]
-      value: Good color, but i'm worried worry about the flavour
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[2]
-      value: 'Nice, let''s trhow it! my favourite part '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[3]
-      value: throw that one far, i care about my face
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[4]
-      value: 'i don''t remember that one hm.. try it! '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: potionCreatedPhrases.Array.data[5]
-      value: 'Oh i see, one of my personal avourite '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[3]
-      value: Yes it can work i guess
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[5]
-      value: i wouldn't have put this one if i was you
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[3]
-      value: 'igredients can be placed  in the marmite or in their pot for a reason..  '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[4]
-      value: 'have you tried to put it in the marmite? '
-      objectReference: {fileID: 0}
     - target: {fileID: 7014782470570931818, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: m_Name
@@ -3322,101 +3257,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.029
-      objectReference: {fileID: 0}
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.284
-      objectReference: {fileID: 0}
-    - target: {fileID: 920753383122207441, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.18431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 26600
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469894677097057972, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824085272470244954, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824085272470244954, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.9530005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824085272470244954, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.09
-      objectReference: {fileID: 0}
     - target: {fileID: 1824085272470244954, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3467,105 +3307,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1824085272470244954, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
+    - target: {fileID: 4980682617013811780, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
         type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1023014462}
+    - target: {fileID: 4980682617013811780, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.106
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.243
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4418669501381992004, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425537440695436294, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.44128913
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425537440695436294, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425537440695436294, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.042488173
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425537440695436294, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.010417243
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425537440695436294, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.07055394
-      objectReference: {fileID: 0}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1023014462}
     - target: {fileID: 7102929093587843795, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
         type: 3}
       propertyPath: m_Name
       value: Pot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393241142664523271, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: potionSpawnOffset.x
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393241142664523271, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: potionSpawnOffset.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393241142664523271, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: potionSpawnOffset.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7628481352211569123, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7628481352211569123, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7628481352211569123, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_LayerOverridePriority
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7676386150446894580, guid: 4e36a7ae371c6754f9dc338d3fbf0ae0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3720,6 +3475,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1011340499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023014462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8761145312011574420, guid: 06c4821b7e9a94f4c81c4aacb7c537d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2098052938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609adcfe2e773dd46a115ddbd8a967e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1029151070
 PrefabInstance:
   m_ObjectHideFlags: 0

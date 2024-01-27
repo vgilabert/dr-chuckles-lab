@@ -130,22 +130,26 @@ public class CrockPot : MonoBehaviour
         }
     }
 
-    IEnumerator CreatePotion(PotionObject potionObj)
+    public void Clear()
     {
         isFull = false;
         hasMagical = false;
         hasOrdinary = false;
         hasSpecial = false;
-        isCreatingPotion = true;
 
         foreach (Element element in elements)
         {
             Debug.Log(element.name);
             element.GetComponent<GrabObject>().Respawn();
         }
-
         elements = new List<Element>();
         potInfos.ResetUI();
+    }
+
+    IEnumerator CreatePotion(PotionObject potionObj)
+    {
+
+        Clear();
 
         Instantiate(potionObj.resultObject, transform.position + potionSpawnOffset, Quaternion.identity);
 

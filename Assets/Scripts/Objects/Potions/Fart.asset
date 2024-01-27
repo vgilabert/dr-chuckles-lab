@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d65bb8e9bee0304b9914499b531d9e7, type: 2}
   - {fileID: 11400000, guid: 5f21822ae63ff1c42b5fffc4d6203399, type: 2}
   spawnSoundFX: 9
-  explodeSoundFX: 4
+  explodeSoundFX: 11
   resultObject: {fileID: 1100233340227068027, guid: 1a556ecc1d3dd044d8a2954761b79139,
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,

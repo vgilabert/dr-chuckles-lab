@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.07058824}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0.53333336}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: xxcv
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad5ba1b6ab22eb948aae94da5d5d37d6, type: 2}
   m_sharedMaterial: {fileID: -2851541151215503085, guid: ad5ba1b6ab22eb948aae94da5d5d37d6,
@@ -493,24 +493,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientDroppedPhrases:
-  - Do you even know how much that costs?!
-  - Don't expect me to clean your mess!
-  - What a goofy person you are..
+  - 'Do you even know how much that costs?!  '
+  - 'Don''t expect me to clean your mess!   '
+  - 'What a goofy person you are..   '
   ingredientAddedPhrases:
-  - I'm not sure that's a good idea...
-  - What are you trying to do?
-  - You don't know what you're doing, do you?
-  - You don't know what you're doing, do you?
-  - AAAAAAAAAH!!! ...Oh wait, that's not so bad.
+  - 'I''m not sure that''s a good idea...  '
+  - 'What are you trying to do?  '
+  - 'You don''t know what you''re doing, do you?   '
+  - 'You don''t know what you''re doing, do you?   '
+  - 'AAAAAAAAAH!!! ...Oh wait, that''s not so bad.   '
   potionCreatedPhrases:
   - Well done!
   - 'You '
   potionDroppedPhrases: []
   potionExplodedPhrases: []
   frequency: 0.148
+  timeBetweenDialog: 0
   dialogueBox: {fileID: 2198847106614141176}
-  dialogueDuration: 1
-  delay: 0.05
+  dialogueDuration: 2
+  delay: 0.01
 --- !u!1 &7389508970365866341
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,8 +540,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8836351197007089902}
   - {fileID: 6570691105593385469}
+  - {fileID: 8836351197007089902}
   - {fileID: 80326149819886110}
   m_Father: {fileID: 2678328310064168771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

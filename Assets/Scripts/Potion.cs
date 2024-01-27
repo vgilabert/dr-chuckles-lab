@@ -9,6 +9,7 @@ public class Potion : MonoBehaviour
 {
     public PotionObject potion;
 
+
     private void Start()
     {
         Destroy(Instantiate(potion.spawnEffect, transform.position, Quaternion.identity), 1.5f);
@@ -17,6 +18,7 @@ public class Potion : MonoBehaviour
 
     public void Explode()
     {
+        DialogueManager.Instance.SetPotionExplodedPhrases(potion.reactionPhrases);
         AudioController.Instance.PlayAudio(potion.explodeSoundFX);
 
         Vector3 explosionPositon = Vector3.zero;
@@ -30,6 +32,7 @@ public class Potion : MonoBehaviour
         else
             explosionPositon = transform.position;
 
+        DialogueManager.Instance.TriggerDialogue(DialogueType.PotionExploded);
         Destroy(Instantiate(potion.explodeVFX, explosionPositon, Quaternion.identity), potion.effectDuration);
         Destroy(this);
     }

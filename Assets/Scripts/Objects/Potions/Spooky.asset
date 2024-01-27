@@ -15,6 +15,10 @@ MonoBehaviour:
   potionName: Unicorn horn and bone fusion potion
   description: 
   hint: 
+  reactionPhrases:
+  - oh no you released them..
+  - well done they won't let us in peace now
+  - Ghost?! Not in my laboratory!!
   ingredients:
   - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}

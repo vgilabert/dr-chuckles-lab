@@ -2674,11 +2674,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2198847106614141176, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574752324783109346, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2731,63 +2726,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
-      propertyPath: frequency
-      value: 0.148
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: dialogueDuration
-      value: 1
+      propertyPath: potionCreatedPhrases.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: ingredientAddedPhrases.Array.size
-      value: 5
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[0]
+      value: Well done! You knew what you were doing afterall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[1]
+      value: Good color, but i'm worried worry about the flavour
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[2]
+      value: 'Nice, let''s trhow it! my favourite part '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[3]
+      value: throw that one far, i care about my face
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[4]
+      value: 'i don''t remember that one hm.. try it! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: potionCreatedPhrases.Array.data[5]
+      value: 'Oh i see, one of my personal avourite '
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: ingredientDroppedPhrases.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[0]
-      value: I'm not sure that's a good idea...
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[1]
-      value: What are you trying to do?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[2]
-      value: You don't know what you're doing, do you?
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
       propertyPath: ingredientAddedPhrases.Array.data[3]
-      value: You don't know what you're doing, do you?
+      value: Yes it can work i guess
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
-      propertyPath: ingredientAddedPhrases.Array.data[4]
-      value: AAAAAAAAAH!!! ...Oh wait, that's not so bad.
+      propertyPath: ingredientAddedPhrases.Array.data[5]
+      value: i wouldn't have put this one if i was you
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[0]
-      value: Do you even know how much that costs?!
+      propertyPath: ingredientDroppedPhrases.Array.data[3]
+      value: 'igredients can be placed  in the marmite or in their pot for a reason..  '
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[1]
-      value: Don't expect me to clean your mess!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
-        type: 3}
-      propertyPath: ingredientDroppedPhrases.Array.data[2]
-      value: What a goofy person you are..
+      propertyPath: ingredientDroppedPhrases.Array.data[4]
+      value: 'have you tried to put it in the marmite? '
       objectReference: {fileID: 0}
     - target: {fileID: 7014782470570931818, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}

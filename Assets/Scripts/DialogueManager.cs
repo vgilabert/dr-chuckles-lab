@@ -13,8 +13,21 @@ public class DialogueManager : MonoBehaviour
     public List<string> potionDroppedPhrases;
     public List<string> potionExplodedPhrases;
 
+    private int lastIngredientDroppedIndex;
+    private int lastIngredientAddedIndex;
+    private int lastPotionCreatedIndex;
+    private int lastPotionDroppedIndex;
+    private int index;
+
+    bool isDialogActive = false;
+
     [Range(0.0f, 1.0f)]
     public float frequency;
+
+    private float currentFrequency;
+    [SerializeField]
+    private float timeBetweenDialog;
+    private bool couldDown;
 
     [SerializeField]
     GameObject dialogueBox;
@@ -38,20 +51,54 @@ public class DialogueManager : MonoBehaviour
             dialogueBox.SetActive(true);
 
 
-            if (dialogueList != null && dialogueList.Count > 0)
+            if (dialogueList != null && dialogueList.Count > 0 && !isDialogActive && !couldDown)
             {
-                string randomPhrase = dialogueList[Random.Range(0, dialogueList.Count)];
-                dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = randomPhrase;
+                string randomPhrase = ChooseRandomPhrase(dialogueList, dialogueType);
                 StartCoroutine(DisplayDialogue(randomPhrase));
-                Debug.Log(randomPhrase);
             }
             return;
         }
 
     }
 
+    string ChooseRandomPhrase(List<string> dialogueList,DialogueType dialogueType)
+    {
+        int choosenIndex = Random.Range(0, dialogueList.Count);
+        while(choosenIndex == index)
+        {
+            choosenIndex = Random.Range(0, dialogueList.Count);
+        }
+        string randomPhrase = dialogueList[choosenIndex];
+
+        switch (dialogueType)
+        {
+            case DialogueType.IngredientDropped:
+                lastIngredientDroppedIndex = choosenIndex;
+                break;
+            case DialogueType.IngredientAdded:
+                lastIngredientAddedIndex = choosenIndex;
+                break;
+            case DialogueType.PotionCreated:
+                lastPotionCreatedIndex = choosenIndex;
+                break;
+            case DialogueType.PotionDropped:
+                lastPotionDroppedIndex = choosenIndex;
+                break;
+            case DialogueType.PotionExploded:
+                lastIngredientDroppedIndex = choosenIndex;
+                break;
+
+            default:
+                return null;
+        }
+        return randomPhrase;
+    }
     IEnumerator DisplayDialogue(string fullText)
     {
+        Debug.Log(fullText);
+
+        dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "";
+        isDialogActive = true;
         for (int i = 0; i < fullText.Length; i++)
         {
             currentText = fullText.Substring(0, i);
@@ -61,6 +108,20 @@ public class DialogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(dialogueDuration);
         dialogueBox.SetActive(false);
+        isDialogActive = false;
+        couldDown = true;
+        StartCoroutine(dialogCouldDown());
+    }
+
+    IEnumerator dialogCouldDown()
+    {
+        yield return new WaitForSeconds(timeBetweenDialog);
+        couldDown = false;
+    }
+    public void SetPotionExplodedPhrases(List<string> phrases)
+    {
+        if(phrases.Count>0)
+            potionExplodedPhrases = phrases;
     }
 
     private List<string> GetDialogueList(DialogueType dialogueType)
@@ -68,15 +129,20 @@ public class DialogueManager : MonoBehaviour
         switch (dialogueType)
         {
             case DialogueType.IngredientDropped:
+                index = lastIngredientDroppedIndex;
                 return ingredientDroppedPhrases;
             case DialogueType.IngredientAdded:
+                index = lastIngredientAddedIndex;
                 return ingredientAddedPhrases;
             case DialogueType.PotionCreated:
+                index = lastPotionCreatedIndex;
                 return potionCreatedPhrases;
             case DialogueType.PotionDropped:
+                index = lastPotionDroppedIndex;
                 return potionDroppedPhrases;
             case DialogueType.PotionExploded:
-                return ingredientAddedPhrases;
+                index = -1;
+                return potionExplodedPhrases;
 
             default:
                 return null;

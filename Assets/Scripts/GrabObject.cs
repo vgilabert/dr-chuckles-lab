@@ -50,8 +50,10 @@ public class GrabObject : MonoBehaviour
         if (!isPotion)
         {
             holderReference.Respawn(this);
-
-            DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
+            if(transform.position.y < 1 || (isOutOfHolder && !isInPot && !isGrabbed))
+            {
+                DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
+            }
         }
         else
         {
@@ -88,7 +90,7 @@ public class GrabObject : MonoBehaviour
             }
         }
 
-        if (transform.position.y < -8)
+        if (transform.position.y <= .2f)
         {
             Respawn();
         }

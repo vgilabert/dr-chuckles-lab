@@ -9,6 +9,10 @@ public class DialogueManager : MonoBehaviour
     public List<string> ingredientDroppedPhrases;
     public List<string> ingredientAddedPhrases;
 
+    public List<string> potionCreatedPhrases;
+    public List<string> potionDroppedPhrases;
+    public List<string> potionExplodedPhrases;
+
     [Range(0.0f, 1.0f)]
     public float frequency;
 
@@ -25,22 +29,6 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
     
-    void Start()
-    {
-        ingredientDroppedPhrases = new List<string>()
-        {
-            "Do you even know how much that costs?!",
-            "Don't expect me to clean your mess!",
-            "What was that?!"
-        };
-        ingredientAddedPhrases = new List<string>()
-        {
-            "What are you trying to do?",
-            "You don't know what you're doing, do you?",
-            "I'm not sure that's a good idea...",
-            "AAAAAAAAAH!!! ...Oh wait, that's not so bad."
-        };
-    }
     
     public void TriggerDialogue(DialogueType dialogueType)
     {
@@ -83,6 +71,13 @@ public class DialogueManager : MonoBehaviour
                 return ingredientDroppedPhrases;
             case DialogueType.IngredientAdded:
                 return ingredientAddedPhrases;
+            case DialogueType.PotionCreated:
+                return potionCreatedPhrases;
+            case DialogueType.PotionDropped:
+                return potionDroppedPhrases;
+            case DialogueType.PotionExploded:
+                return ingredientAddedPhrases;
+
             default:
                 return null;
         }
@@ -97,5 +92,6 @@ public enum DialogueType
     IngredientAdded,
     PotionCreated,
     PotionDropped,
+    PotionExploded,
     Help
 }

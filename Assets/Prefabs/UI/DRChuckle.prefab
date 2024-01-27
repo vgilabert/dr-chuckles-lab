@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2678328310064168771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -493,14 +493,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientDroppedPhrases:
-  - fils de pute
-  - "ta m\xE8re la chienne"
-  - "encul\xE9"
-  - je vais t'enculer
-  ingredientAddedPhrases: []
-  frequency: 0
+  - Do you even know how much that costs?!
+  - Don't expect me to clean your mess!
+  - What a goofy person you are..
+  ingredientAddedPhrases:
+  - I'm not sure that's a good idea...
+  - What are you trying to do?
+  - You don't know what you're doing, do you?
+  - You don't know what you're doing, do you?
+  - AAAAAAAAAH!!! ...Oh wait, that's not so bad.
+  potionCreatedPhrases:
+  - Well done!
+  - 'You '
+  potionDroppedPhrases: []
+  potionExplodedPhrases: []
+  frequency: 0.148
   dialogueBox: {fileID: 2198847106614141176}
-  dialogueDuration: 2
+  dialogueDuration: 1
+  delay: 0.05
 --- !u!1 &7389508970365866341
 GameObject:
   m_ObjectHideFlags: 0

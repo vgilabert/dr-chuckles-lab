@@ -11,7 +11,7 @@ public class PotionObject : ScriptableObject
     public string description;
     public string hint;
 
-   
+    public List<string> rectionPhrases;
 
     public ElementObject[] ingredients;
 

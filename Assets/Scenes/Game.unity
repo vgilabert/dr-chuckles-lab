@@ -2741,8 +2741,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
+      propertyPath: ingredientAddedPhrases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
       propertyPath: ingredientDroppedPhrases.Array.size
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientAddedPhrases.Array.data[0]
+      value: I'm not sure that's a good idea...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientAddedPhrases.Array.data[1]
+      value: What are you trying to do?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientAddedPhrases.Array.data[2]
+      value: You don't know what you're doing, do you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientAddedPhrases.Array.data[3]
+      value: You don't know what you're doing, do you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientAddedPhrases.Array.data[4]
+      value: AAAAAAAAAH!!! ...Oh wait, that's not so bad.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientDroppedPhrases.Array.data[0]
+      value: Do you even know how much that costs?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientDroppedPhrases.Array.data[1]
+      value: Don't expect me to clean your mess!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071979538515908869, guid: f5eefde46517f8f49a1c2acdd2964755,
+        type: 3}
+      propertyPath: ingredientDroppedPhrases.Array.data[2]
+      value: What a goofy person you are..
       objectReference: {fileID: 0}
     - target: {fileID: 7014782470570931818, guid: f5eefde46517f8f49a1c2acdd2964755,
         type: 3}
@@ -3810,7 +3855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261c1c76707c289418d8bbc57b167f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractForce: 2
+  attractForce: 10
 --- !u!4 &1116387421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d86fab294182e54a960b26a98696573,

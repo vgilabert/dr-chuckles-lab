@@ -53,14 +53,17 @@ public class GrabObject : MonoBehaviour
         if (!isPotion)
         {
             holderReference.Respawn(this);
+
+            DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
         }
         else
         {
             transform.position = GameObject.Find("PotionHolder").transform.position;
             _rigidbody.velocity = Vector3.zero;
+
+            DialogueManager.Instance.TriggerDialogue(DialogueType.PotionDropped);
         }
 
-        DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientDropped);
 
         isInPot = false;
         isOutOfHolder = false;

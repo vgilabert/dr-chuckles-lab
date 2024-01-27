@@ -19,5 +19,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}
   - {fileID: 11400000, guid: b5a8714a66f59094699dc020521f0e17, type: 2}
-  resultObject: {fileID: 6059070790920416492, guid: 6ed285e03cb330143b75355cd8134f26,
+  spawnSoundFX: 9
+  explodeSoundFX: 18
+  resultObject: {fileID: 1100233340227068027, guid: bc7b872fcb3d7914ba02330d5103fea4,
     type: 3}
+  spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
+    type: 3}
+  throwEffect: {fileID: 575884764894659216, guid: eb1fc112549fa8a4a9c27a473976de75,
+    type: 3}
+  effectDuration: 5

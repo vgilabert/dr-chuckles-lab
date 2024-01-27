@@ -14,6 +14,7 @@ public class CrockPot : MonoBehaviour
     private bool hasMagical = false;
     private bool hasOrdinary = false;
     private bool hasSpecial = false;
+    private bool isCreatingPotion = false;
 
     [SerializeField]
     private AudioSource audioSource;
@@ -45,7 +46,7 @@ public class CrockPot : MonoBehaviour
     {
         Element element = other.GetComponent<Element>();
         GrabObject grabObject = other.GetComponent<GrabObject>();
-        if(element != null)
+        if(element != null && !isCreatingPotion)
         {
             if (elements.Contains(element))
             {
@@ -123,29 +124,33 @@ public class CrockPot : MonoBehaviour
             if (ingredients.SequenceEqual(potionIngredients))
             {
                 Debug.Log(potions[i].potionName);
-                CreatePotion(potions[i]);
-                potInfos.ResetUI();
+                StartCoroutine(CreatePotion(potions[i]));
                 break;
             }
         }
     }
 
-    private void CreatePotion(PotionObject potionObj)
+    IEnumerator CreatePotion(PotionObject potionObj)
     {
         isFull = false;
         hasMagical = false;
         hasOrdinary = false;
         hasSpecial = false;
+        isCreatingPotion = true;
 
         foreach (Element element in elements)
         {
+            Debug.Log(element.name);
             element.GetComponent<GrabObject>().Respawn();
         }
 
-        // Create potion
-        // TODO add effect
-        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Potion);
+        elements = new List<Element>();
+        potInfos.ResetUI();
+
         Instantiate(potionObj.resultObject, transform.position + potionSpawnOffset, Quaternion.identity);
+
+        yield return new WaitForSeconds(2f);
+        isCreatingPotion = false;
     }
 
     void OnDrawGizmos()

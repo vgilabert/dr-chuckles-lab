@@ -96,5 +96,6 @@ public enum DialogueType
     IngredientDropped,
     IngredientAdded,
     PotionCreated,
-    Help,
+    PotionDropped,
+    Help
 }

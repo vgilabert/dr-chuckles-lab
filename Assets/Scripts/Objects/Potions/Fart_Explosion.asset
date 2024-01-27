@@ -28,5 +28,5 @@ MonoBehaviour:
     type: 3}
   explodeVFX: {fileID: 2277477842238088881, guid: b2c0338292819294ca397c256f4cafeb,
     type: 3}
-  isGroundVFX: 1
+  isGroundVFX: 0
   effectDuration: 4

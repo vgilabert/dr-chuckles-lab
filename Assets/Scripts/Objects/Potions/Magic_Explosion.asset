@@ -15,12 +15,13 @@ MonoBehaviour:
   potionName: Amber shine potion
   description: 
   hint: 
+  reactionPhrases: []
   ingredients:
   - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}
   - {fileID: 11400000, guid: 4a2ef619376410148882938b45ee3682, type: 2}
   spawnSoundFX: 9
-  explodeSoundFX: 13
+  explodeSoundFX: 24
   resultObject: {fileID: 1100233340227068027, guid: 32b82f2420372a44c9cd17e047d36b3f,
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,

@@ -15,7 +15,9 @@ MonoBehaviour:
   potionName: Bone and strange pills boneless potion
   description: 
   hint: 
-  reactionPhrases: []
+  reactionPhrases:
+  - 'Ooof cool!   '
+  - 'yeah!  '
   ingredients:
   - {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}

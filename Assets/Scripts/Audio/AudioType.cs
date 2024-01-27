@@ -33,6 +33,7 @@ namespace UnityCore
             SFX_FireWoosh2,
             SFX_WooshWind,
             SFX_Woosh,
+            SFX_WooshElectric,
 
             //custom types
         }

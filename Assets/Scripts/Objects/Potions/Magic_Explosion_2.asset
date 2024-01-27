@@ -15,7 +15,7 @@ MonoBehaviour:
   potionName: Unicorn horn and durian firework potion
   description: 
   hint: 
-  rectionPhrases: []
+  reactionPhrases: []
   ingredients:
   - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
   - {fileID: 11400000, guid: 8d65bb8e9bee0304b9914499b531d9e7, type: 2}
@@ -26,7 +26,7 @@ MonoBehaviour:
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
     type: 3}
-  explodeVFX: {fileID: 2611915870594570158, guid: a5f666d1588057c469e8141724a5ca96,
+  explodeVFX: {fileID: 8394543730570438933, guid: 207ef8c30a02809439a169610d45fac4,
     type: 3}
   isGroundVFX: 1
   effectDuration: 3

@@ -4308,7 +4308,7 @@ PrefabInstance:
     - target: {fileID: 5914055040149206580, guid: dc200d34b981d94468ae03b4394262aa,
         type: 3}
       propertyPath: planeHeight
-      value: 18.53
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5914055040149206580, guid: dc200d34b981d94468ae03b4394262aa,
         type: 3}

@@ -15,7 +15,6 @@ public class GrabObject : MonoBehaviour
 
     private bool teleportedToPot = false;
     private float liveTimer;
-    private float defaultGrab;
     private ElementHolder holderReference;
     
     void Start()
@@ -25,7 +24,6 @@ public class GrabObject : MonoBehaviour
         holderReference = GetComponentInParent<ElementHolder>();
         
         liveTimer = 0;
-        defaultGrab = _rigidbody.drag;
     }
 
     private void Update()
@@ -40,11 +38,10 @@ public class GrabObject : MonoBehaviour
         {
             Vector3 direction = grabManager.mousePosOnPlane - transform.position;
             _rigidbody.AddForce(direction * grabManager.force);
-            _rigidbody.drag = grabManager.drag;
         }
         else
         {
-            _rigidbody.drag = defaultGrab;
+            _rigidbody.AddForce(Vector3.down * 20);
         }
     }
     
@@ -93,7 +90,6 @@ public class GrabObject : MonoBehaviour
 
         if (transform.position.y < -8)
         {
-            
             Respawn();
         }
 
@@ -111,12 +107,14 @@ public class GrabObject : MonoBehaviour
         {
             AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Grab);
             isGrabbed = true;
+            _rigidbody.drag = grabManager.drag;
         }
     }
     
     void OnMouseUp()
     {
         isGrabbed = false;
+        _rigidbody.drag = GrabManager.Instance.defaultGrab;
         AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Ungrab);
 
         var releaseForce = EasingFunction.GetEasingFunction(grabManager.easeType)(

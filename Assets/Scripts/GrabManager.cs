@@ -6,6 +6,8 @@ public class GrabManager : MonoBehaviour
 {
     public float planeHeight = 2f;
     public float force = 20f;
+    public float defaultGrab;
+
     public float drag = 15f;
     public float releaseUpForce = 300f;
     public float maxForceMagnitude = 10f;

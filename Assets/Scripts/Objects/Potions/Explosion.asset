@@ -15,13 +15,13 @@ MonoBehaviour:
   potionName: Bone and strange pills boneless potion
   description: 
   hint: 
-  rectionPhrases: []
+  reactionPhrases: []
   ingredients:
   - {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}
   - {fileID: 11400000, guid: b5a8714a66f59094699dc020521f0e17, type: 2}
   spawnSoundFX: 9
-  explodeSoundFX: 14
+  explodeSoundFX: 22
   resultObject: {fileID: 1100233340227068027, guid: 93582bd6819f75e408c6c32b7a680974,
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,

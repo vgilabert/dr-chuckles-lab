@@ -15,13 +15,13 @@ MonoBehaviour:
   potionName: Berry giggle potion
   description: 
   hint: 
-  rectionPhrases: []
+  reactionPhrases: []
   ingredients:
   - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
   - {fileID: 11400000, guid: 8d65bb8e9bee0304b9914499b531d9e7, type: 2}
   - {fileID: 11400000, guid: 4a2ef619376410148882938b45ee3682, type: 2}
   spawnSoundFX: 9
-  explodeSoundFX: 11
+  explodeSoundFX: 24
   resultObject: {fileID: 1100233340227068027, guid: 76265992527bdfc4aa87f0ac7032434a,
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,

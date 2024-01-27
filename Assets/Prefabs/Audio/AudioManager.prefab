@@ -120,6 +120,10 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 65b94c468b29fe349b63d16af06ea5df, type: 3}
     - type: 19
       clip: {fileID: 8300000, guid: fce843ae79c50234e904203494726ad5, type: 3}
+    - type: 22
+      clip: {fileID: 8300000, guid: 8d1d4f206a352ef4599c6118e9ed40e5, type: 3}
+    - type: 24
+      clip: {fileID: 8300000, guid: 7099e214ebc591a4296e5292a6bc9d2f, type: 3}
     paused: 0
     volume: 0
     pitch: 0

@@ -29,6 +29,10 @@ namespace UnityCore
             SFX_Spookyeffect,
             SFX_MagicalWoosh,
             SFX_ImpactChimes,
+            SFX_FireWoosh,
+            SFX_FireWoosh2,
+            SFX_WooshWind,
+            SFX_Woosh,
 
             //custom types
         }

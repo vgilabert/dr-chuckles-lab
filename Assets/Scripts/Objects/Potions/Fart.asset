@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
-  m_Name: N16
+  m_Name: Fart
   m_EditorClassIdentifier: 
   potionName: Durian spicy potion
   description: 
@@ -25,6 +25,7 @@ MonoBehaviour:
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
     type: 3}
-  throwEffect: {fileID: 815261084143609077, guid: 27085e20ab86f5e4eac4210da4d255e0,
+  explodeVFX: {fileID: 1180721355244850298, guid: 86802cf5bf4b7c4478fbcd54cf1d390a,
     type: 3}
+  isGroundVFX: 0
   effectDuration: 5

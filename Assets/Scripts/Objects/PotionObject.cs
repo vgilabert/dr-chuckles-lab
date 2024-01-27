@@ -20,7 +20,9 @@ public class PotionObject : ScriptableObject
 
     public GameObject resultObject;
     public GameObject spawnEffect;
-    public GameObject throwEffect;
+    public GameObject explodeVFX;
+
+    public bool isGroundVFX = false;
 
     public float effectDuration;
 

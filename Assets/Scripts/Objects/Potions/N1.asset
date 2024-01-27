@@ -25,6 +25,6 @@ MonoBehaviour:
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
     type: 3}
-  throwEffect: {fileID: 815261084143609077, guid: 27085e20ab86f5e4eac4210da4d255e0,
-    type: 3}
+  explodeVFX: {fileID: 0}
+  isGroundVFX: 0
   effectDuration: 5

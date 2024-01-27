@@ -12,8 +12,7 @@ public class ExplosionController : MonoBehaviour
         Potion obj = other.GetComponent<Potion>();
         if(obj!=null)
         {
-            AudioController.Instance.PlayAudio(obj.potion.explodeSoundFX);
-            Destroy(Instantiate(obj.potion.throwEffect, transform.position, Quaternion.identity), obj.potion.effectDuration);
+            obj.Explode();
             Destroy(obj.gameObject);
         }
     }

@@ -17,7 +17,20 @@ public class Potion : MonoBehaviour
 
     public void Explode()
     {
-        Destroy(Instantiate(potion.throwEffect, transform.position, Quaternion.identity), potion.effectDuration);
+        AudioController.Instance.PlayAudio(potion.explodeSoundFX);
+
+        Vector3 explosionPositon = Vector3.zero;
+        if (potion.isGroundVFX)
+        {
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 20f))
+            {
+                explosionPositon = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+            }
+        }
+        else
+            explosionPositon = transform.position;
+
+        Destroy(Instantiate(potion.explodeVFX, explosionPositon, Quaternion.identity), potion.effectDuration);
         Destroy(this);
     }
 }

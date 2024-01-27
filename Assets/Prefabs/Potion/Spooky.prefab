@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5399855801620138635}
   - component: {fileID: 4544206129933468635}
   m_Layer: 0
-  m_Name: Potion 4
+  m_Name: Spooky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

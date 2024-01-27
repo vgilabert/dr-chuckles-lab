@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63a47c809dd5e614ab4668c7aeeaebeb, type: 3}
-  m_Name: N5
+  m_Name: Spooky
   m_EditorClassIdentifier: 
   potionName: Unicorn horn and bone fusion potion
   description: 
@@ -25,6 +25,7 @@ MonoBehaviour:
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
     type: 3}
-  throwEffect: {fileID: 575884764894659216, guid: eb1fc112549fa8a4a9c27a473976de75,
+  explodeVFX: {fileID: 575884764894659216, guid: eb1fc112549fa8a4a9c27a473976de75,
     type: 3}
-  effectDuration: 5
+  isGroundVFX: 1
+  effectDuration: 8

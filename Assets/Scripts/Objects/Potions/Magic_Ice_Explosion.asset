@@ -15,6 +15,9 @@ MonoBehaviour:
   potionName: Gear and strange pills reverse potion
   description: 
   hint: 
+  reactionPhrases:
+  - you are pretty talented
+  - i like that on make an other please!!
   ingredients:
   - {fileID: 11400000, guid: 6112c3d38c6c5a543a43851e5ecfea48, type: 2}
   - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}

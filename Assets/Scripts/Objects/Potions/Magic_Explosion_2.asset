@@ -15,7 +15,8 @@ MonoBehaviour:
   potionName: Unicorn horn and durian firework potion
   description: 
   hint: 
-  reactionPhrases: []
+  reactionPhrases:
+  - 
   ingredients:
   - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
   - {fileID: 11400000, guid: 8d65bb8e9bee0304b9914499b531d9e7, type: 2}

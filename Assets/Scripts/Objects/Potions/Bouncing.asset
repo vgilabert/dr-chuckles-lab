@@ -15,7 +15,9 @@ MonoBehaviour:
   potionName: Gear squeak potion
   description: 
   hint: 
-  rectionPhrases: []
+  reactionPhrases:
+  - weird huh!
+  - hahaha
   ingredients:
   - {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3, type: 2}
   - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}

@@ -15,7 +15,8 @@ MonoBehaviour:
   potionName: Dwarf tooth and berry grow potion
   description: 
   hint: 
-  rectionPhrases: []
+  reactionPhrases:
+  - you are pretty talented
   ingredients:
   - {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3, type: 2}
   - {fileID: 11400000, guid: 8d65bb8e9bee0304b9914499b531d9e7, type: 2}

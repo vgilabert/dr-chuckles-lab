@@ -15,7 +15,9 @@ MonoBehaviour:
   potionName: Unicorn horn and bone fusion potion
   description: 
   hint: 
-  reactionPhrases: []
+  reactionPhrases:
+  - funny one make an other!!
+  - i like that on make an other please!!
   ingredients:
   - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
   - {fileID: 11400000, guid: 34b1459c8a141754c91418069db8c662, type: 2}

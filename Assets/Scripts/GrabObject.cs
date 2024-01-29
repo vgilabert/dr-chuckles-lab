@@ -61,6 +61,7 @@ public class GrabObject : MonoBehaviour
             _rigidbody.velocity = Vector3.zero;
 
             DialogueManager.Instance.TriggerDialogue(DialogueType.PotionDropped);
+            GameManager.Instance.TriggerPotionTrhow(true);
         }
 
 
@@ -70,7 +71,7 @@ public class GrabObject : MonoBehaviour
         isGrabable = true;
         teleportedToPot = false;
     }
-    
+
     void CheckPosition()
     {
         if (!isPotion)
@@ -79,20 +80,18 @@ public class GrabObject : MonoBehaviour
             if (isOutOfHolder && !isGrabbed && !isInPot)
             {
                 liveTimer += Time.deltaTime;
-                if (liveTimer >= GrabManager.Instance.timeToLive)
-                {
-                    Respawn();
-                }
-            }
-            else
-            {
-                liveTimer = 0;
             }
         }
 
-        if (transform.position.y <= .2f)
+        if (transform.position.y <= 2f)
+        {
+            liveTimer += Time.deltaTime;
+        }
+
+        if (liveTimer >= GrabManager.Instance.timeToLive)
         {
             Respawn();
+            liveTimer = 0;
         }
 
         if (isInPot && !teleportedToPot)
@@ -101,13 +100,14 @@ public class GrabObject : MonoBehaviour
             _rigidbody.velocity = Vector3.zero;
             teleportedToPot = true;
         }
+
     }
 
     void OnMouseDown()
     {
         if (isGrabable)
         {
-            AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Grab);
+            AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Grab, false, 0f, -.7f);
             isGrabbed = true;
             _rigidbody.drag = grabManager.drag;
         }
@@ -117,7 +117,7 @@ public class GrabObject : MonoBehaviour
     {
         isGrabbed = false;
         _rigidbody.drag = GrabManager.Instance.defaultGrab;
-        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Ungrab);
+        AudioController.Instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Ungrab, false, 0f, -.9f);
 
         var releaseForce = EasingFunction.GetEasingFunction(grabManager.easeType)(
             0, 

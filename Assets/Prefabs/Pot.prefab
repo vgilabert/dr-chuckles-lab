@@ -726,6 +726,8 @@ MonoBehaviour:
   audioSource: {fileID: 1848052852449699232}
   soundFX: {fileID: 8300000, guid: 55ebcb2b2e9f9834f9283f3bcd974bee, type: 3}
   potInfos: {fileID: 7659456514673874733}
+  addIngredientVFX: {fileID: 2110476438170000851, guid: 732b5c6a0ef5b844d84acce29865a79f,
+    type: 3}
   potionSpawnOffset: {x: -10, y: 2, z: -5}
 --- !u!135 &5425537440695436294
 SphereCollider:

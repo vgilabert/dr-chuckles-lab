@@ -14,12 +14,14 @@ public class Potion : MonoBehaviour
     {
         Destroy(Instantiate(potion.spawnEffect, transform.position, Quaternion.identity), 1.5f);
         AudioController.Instance.PlayAudio(potion.spawnSoundFX);
+
     }
 
     public void Explode()
     {
         DialogueManager.Instance.SetPotionExplodedPhrases(potion.reactionPhrases);
         AudioController.Instance.PlayAudio(potion.explodeSoundFX);
+        GameManager.Instance.TriggerPotionTrhow(false);
 
         Vector3 explosionPositon = Vector3.zero;
         if (potion.isGroundVFX)

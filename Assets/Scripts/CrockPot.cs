@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class CrockPot : MonoBehaviour
 {
+
     private List<Element> elements;
 
     private bool isFull = false;
@@ -22,6 +23,8 @@ public class CrockPot : MonoBehaviour
     private AudioClip soundFX;
     [SerializeField]
     private PotInfos potInfos;
+    [SerializeField]
+    GameObject addIngredientVFX;
 
     public Vector3 potionSpawnOffset;
 
@@ -85,10 +88,12 @@ public class CrockPot : MonoBehaviour
                             potInfos.UpdateUI(ElementType.Special);
                         }
                         break;
+
                 }
 
                 if (isValid)
                 {
+                    Destroy(Instantiate(addIngredientVFX, transform.position, Quaternion.identity),1f);
                     grabObject.isInPot = true;
                     grabObject.isGrabable = false;
                     DialogueManager.Instance.TriggerDialogue(DialogueType.IngredientAdded);
@@ -136,6 +141,7 @@ public class CrockPot : MonoBehaviour
         hasMagical = false;
         hasOrdinary = false;
         hasSpecial = false;
+        isCreatingPotion = false;
 
         foreach (Element element in elements)
         {
@@ -148,12 +154,10 @@ public class CrockPot : MonoBehaviour
 
     IEnumerator CreatePotion(PotionObject potionObj)
     {
-
-        Clear();
-
+        yield return new WaitForSeconds(.2f);
         Instantiate(potionObj.resultObject, transform.position + potionSpawnOffset, Quaternion.identity);
 
-        yield return new WaitForSeconds(2f);
+        Clear();
         isCreatingPotion = false;
     }
 

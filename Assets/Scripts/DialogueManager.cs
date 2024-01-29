@@ -19,14 +19,16 @@ public class DialogueManager : MonoBehaviour
     private int lastPotionDroppedIndex;
     private int index;
 
+    [SerializeField]
     bool isDialogActive = false;
 
     [Range(0.0f, 1.0f)]
     public float frequency;
-
     private float currentFrequency;
+
     [SerializeField]
     private float timeBetweenDialog;
+    [SerializeField]
     private bool couldDown;
 
     [SerializeField]
@@ -48,7 +50,6 @@ public class DialogueManager : MonoBehaviour
         if(Random.Range(0f, 1f) < frequency)
         {
             List<string> dialogueList = GetDialogueList(dialogueType);
-            dialogueBox.SetActive(true);
 
 
             if (dialogueList != null && dialogueList.Count > 0 && !isDialogActive && !couldDown)
@@ -70,6 +71,8 @@ public class DialogueManager : MonoBehaviour
         }
         string randomPhrase = dialogueList[choosenIndex];
 
+        Debug.Log(dialogueType + " event triggered the choosen phrase " +dialogueList[choosenIndex] +" at index  " +choosenIndex + " from " + dialogueList);
+
         switch (dialogueType)
         {
             case DialogueType.IngredientDropped:
@@ -84,12 +87,6 @@ public class DialogueManager : MonoBehaviour
             case DialogueType.PotionDropped:
                 lastPotionDroppedIndex = choosenIndex;
                 break;
-            case DialogueType.PotionExploded:
-                lastIngredientDroppedIndex = choosenIndex;
-                break;
-
-            default:
-                return null;
         }
         return randomPhrase;
     }
@@ -97,9 +94,10 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log(fullText);
 
+        dialogueBox.SetActive(true);
         dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "";
         isDialogActive = true;
-        for (int i = 0; i < fullText.Length; i++)
+        for (int i = 0; i <= fullText.Length; i++)
         {
             currentText = fullText.Substring(0, i);
             dialogueBox.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = currentText;

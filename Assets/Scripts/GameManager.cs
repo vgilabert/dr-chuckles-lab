@@ -8,6 +8,8 @@ using AudioType = UnityCore.Audio.AudioType;
 public class GameManager : MonoBehaviour
 {
     public bool isGamePaused = false;
+    [SerializeField]
+    private bool isFirstPotion = true;
 
     [Header("Music")]
     public AudioType levelMusic;
@@ -19,6 +21,9 @@ public class GameManager : MonoBehaviour
     CameraView cam;
 
     private static GameManager instance;
+    [SerializeField]
+    private int potionMissedThrow = 0;
+
     public static GameManager Instance
     {
         get
@@ -70,6 +75,31 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    public void TriggerPotionTrhow(bool active)
+    {
+        Tuto tuto = GameObject.FindObjectOfType<Tuto>();
+
+
+        if (tuto != null)
+        {
+            if (active)
+            {
+
+                potionMissedThrow++;
+                if (isFirstPotion || potionMissedThrow >= 5)
+                {
+                    tuto.TriggerPotionThrowInfos(active);
+                    potionMissedThrow = 0;
+                }
+
+            }
+            else
+                tuto.TriggerPotionThrowInfos(false);
+        }
+
+        isFirstPotion = false;
+    }
+
 
     public void SetGamePause(bool pause)
     {

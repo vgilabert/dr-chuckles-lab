@@ -773,6 +773,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3947201071163686674, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 4209136083825342087, guid: 4f9359d763eedee4a94958c399c9372f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -898,6 +903,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6624099147604043765, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931679744651335774, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931679744651335774, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7662894551784359084, guid: 4f9359d763eedee4a94958c399c9372f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -907,6 +927,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706230760532852100, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706230760532852100, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365358943655717548, guid: 4f9359d763eedee4a94958c399c9372f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64
       objectReference: {fileID: 0}
     - target: {fileID: 8440496463899209814, guid: 4f9359d763eedee4a94958c399c9372f,
         type: 3}

@@ -15,6 +15,9 @@ MonoBehaviour:
   potionName: Durian and dwarf tooth curse potion
   description: 
   hint: 
+  reactionPhrases:
+  - funny one make an other!!
+  - well done they won't let us in peace now
   ingredients:
   - {fileID: 11400000, guid: fcef301cb9fac32428b51e3e649ee8f3, type: 2}
   - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}
@@ -25,6 +28,7 @@ MonoBehaviour:
     type: 3}
   spawnEffect: {fileID: 2110476438170000851, guid: 866d5b6777d76cc458308346d56af59f,
     type: 3}
-  throwEffect: {fileID: 815261084143609077, guid: 27085e20ab86f5e4eac4210da4d255e0,
+  explodeVFX: {fileID: 2232191510035085060, guid: 600ebccdb5a7c5d4fa9125bcc22c53ea,
     type: 3}
+  isGroundVFX: 0
   effectDuration: 5

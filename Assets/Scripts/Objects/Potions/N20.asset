@@ -15,7 +15,8 @@ MonoBehaviour:
   potionName: Gear and strange pills reverse potion
   description: 
   hint: 
-  reactionPhrases: []
+  reactionPhrases:
+  - 'Ooof cool!   '
   ingredients:
   - {fileID: 11400000, guid: 50b198c6dc35a0943b5453b907c5c5fe, type: 2}
   - {fileID: 11400000, guid: 672239200337a9e4997992f254055d7f, type: 2}
